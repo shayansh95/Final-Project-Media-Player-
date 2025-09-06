@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media player</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>میز خبری</h1>
+    <div class="container">
+        <div class="main">
+            <div class="player">
+                <video class="video-container" id="video">
+                    <source src="https://deneco.arvanvod.ir/XAGg8KdzN6/K3lM0wOYzn/h_1080_2916k.mp4" type="video/mp4"
+                        id="source" />
+                    <p>No HTML5 video supported</p>
+                </video>
+                <div class="controls">
+                    <div class="progress">
+                        <div class="progress__filled"></div>
+                    </div>
+                    <button class="controls__btn playPauseBtn" title="Toggle Play">
+                        ►
+                    </button>
+                </div>
+            </div>
+            <h3 id="video-title">شایعه ریزش طلا</h3>
+        </div>
+        <div class="tumbs">
+            <div class="tumb" data-source="https://deneco.arvanvod.ir/XAGg8KdzN6/K3lM0wOYzn/h_1080_2916k.mp4"
+                data-title="شایعه ریزش طلا" onclick="resource(this);">
+                <img src="./images/1.jpg" alt="شایعه ریزش طلا">
+                <br>
+                شایعه ریزش طلا
+            </div>
+            <div class="tumb" data-source="https://deneco.arvanvod.ir/XAGg8KdzN6/EdNg2vgoqP/h_1080_4500k.mp4"
+                data-title="رقیب چینی انویدیا" onclick="resource(this);">
+                <img src="./images/2.jpg" alt="رقیب چینی انویدیا">
+                <br>
+                رقیب چینی انویدیا
+            </div>
+            <div class="tumb" data-source="https://deneco.arvanvod.ir/XAGg8KdzN6/4L5kJZkqbW/h_1080_2202k.mp4"
+                data-title="کودکان و سالمندان قربانی تحریم" onclick="resource(this);">
+                <img src="./images/3.jpg" alt="کودکان و سالمندان قربانی تحریم">
+                <br>
+                کودکان و سالمندان قربانی تحریم
+            </div>
+            <div class="tumb" data-source="https://deneco.arvanvod.ir/XAGg8KdzN6/12egk0z0WE/h_1080_3086k.mp4"
+                data-title="ایران با کارت شانگهای چه می‌کند؟" onclick="resource(this);">
+                <img src="./images/4.jpg" alt="ایران با کارت شانگهای چه می‌کند؟">
+                <br>
+                ایران با کارت شانگهای چه می‌کند؟
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
