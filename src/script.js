@@ -31,7 +31,7 @@ function resource(self) {
   var video = document.getElementById('video');
   video.pause();
   var source = document.getElementById('source');
-  video.setAttribute('src', self.dataset.source);
+  source.setAttribute('src', self.dataset.source);
   video.load();
   video.play();
   document.getElementById('video-title').innerText = title;
@@ -47,4 +47,5 @@ let mousedown = false;
 progress.addEventListener("click", jump);
 progress.addEventListener("mousedown", () => (mousedown = true));
 progress.addEventListener("mousemove", (e) => mousedown && jump(e));
+
 progress.addEventListener("mouseup", () => (mousedown = false));
