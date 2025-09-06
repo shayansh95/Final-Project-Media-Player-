@@ -25,6 +25,18 @@ function jump(e) {
   videoContainer.currentTime = position;
 }
 
+
+function resource(self) {
+  var title = self.dataset.title;
+  var video = document.getElementById('video');
+  video.pause();
+  var source = document.getElementById('source');
+  video.setAttribute('src', self.dataset.source);
+  video.load();
+  video.play();
+  document.getElementById('video-title').innerText = title;
+}
+
 playPauseBtn.addEventListener("click", togglePlay);
 videoContainer.addEventListener("click", togglePlay);
 videoContainer.addEventListener("play", updatePlayBtn);
@@ -36,4 +48,3 @@ progress.addEventListener("click", jump);
 progress.addEventListener("mousedown", () => (mousedown = true));
 progress.addEventListener("mousemove", (e) => mousedown && jump(e));
 progress.addEventListener("mouseup", () => (mousedown = false));
-]
